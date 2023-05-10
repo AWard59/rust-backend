@@ -11,7 +11,7 @@ async fn main() {
         .route("/", get(handler))
         .layer(
             tower_http::cors::CorsLayer::new()
-                .allow_origin("http://localhost:5173".parse::<axum::http::HeaderValue>().unwrap())
+                .allow_origin("http://localhost:3000".parse::<axum::http::HeaderValue>().unwrap())
                 .allow_headers([CONTENT_TYPE])
                 .allow_methods([axum::http::Method::GET]),
         );
